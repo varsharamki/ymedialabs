@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="followers.githubusersfollowers.view.fragments.UserNameFragment"
+    >
+    <data>
+        <import type="android.view.View" />
+
+        <variable name="viewModel" type="followers.githubusersfollowers.viewmodel.UserFollowersViewModel"/>
+        <variable name="githubuser" type="followers.githubusersfollowers.model.GithubUserFollowers"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linear"
+        >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="15dp">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="Enter Github username  " />
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={githubuser.login}"
+
+                />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:text="Find My Followers"
+                android:onClick="@{viewModel::onClickButton}"
+                />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/card2"
+            android:layout_weight="0.5"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="15dp"
+            >
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="Pick Popular GithubUsernames " />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+</layout>

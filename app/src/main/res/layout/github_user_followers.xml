@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="followers.githubusersfollowers.view.fragments.UserFollowersFragment"
+
+    >
+    <data>
+        <import type="android.view.View" />
+
+        <variable name="viewModel" type="followers.githubusersfollowers.viewmodel.UserFollowersViewModel"/>
+        <variable name="githubuser" type="followers.githubusersfollowers.model.GithubUserFollowers"/>
+
+    </data>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/followers_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"/>
+
+</layout>
