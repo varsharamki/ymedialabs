@@ -1,3 +1,8 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="user_name">20sp</dimen>
+    <dimen name="margin_user_name">20dp</dimen>
+
+
 </resources>

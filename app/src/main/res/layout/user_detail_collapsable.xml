@@ -20,50 +20,106 @@
     >
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/imageView"
 
-            android:layout_width="1"
+            android:layout_width="96dp"
             android:layout_height="96dp"
             app:civ_border_width="2dp"
 
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:civ_border_color="#FF000000"/>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center_horizontal"
+
+
             >
-
-            <TextView
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/cardview_default_radius"
-                android:text="@{viewModel.following}"
+                 android:layout_margin="15dp"
+                android:id="@+id/following_linear"
 
-                android:textSize="20sp"
-                />
+                >
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-            <TextView
+                    android:textSize="10sp"
+                    android:text="FOLLOWING"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+
+                    android:text="@{viewModel.following}"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="@{viewModel.followers}"
+                android:layout_margin="15dp"
+                android:id="@+id/followers_linear"
 
-                />
-            <TextView
+                >
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="10sp"
+                    android:text="FOLLOWERS"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+
+                    android:text="@{viewModel.followers}"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="@{viewModel.publicRepos}"
-                />
+                android:layout_margin="15dp"
+                android:id="@+id/public_linear"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="10sp"
+                    android:text="PUBLIC REPOS"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+
+                    android:text="@{viewModel.publicRepos}"
+                    />
+
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

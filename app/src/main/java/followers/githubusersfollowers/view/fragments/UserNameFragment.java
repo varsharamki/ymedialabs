@@ -75,9 +75,8 @@ public class UserNameFragment extends Fragment {
                     .setPositiveButton("OK ?? ", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                          if(GithubUsersFollowersApplication.isNetworkAvailable(getActivity())) {
-                              dialog.dismiss();
-                          }
+                          dialog.dismiss();
+
                         }
                     });
 

@@ -5,6 +5,10 @@
     <string name="title_activity_github_user_detail">GithubUserDetailActivity</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
+<string name="hello_blank_fragment">Hello blank fragment</string>
+
+<string name="enter_user_name">Enter Github User Name</string>
+<string name="find_my_followers">Find My Followers</string>
+
+
+    </resources>
